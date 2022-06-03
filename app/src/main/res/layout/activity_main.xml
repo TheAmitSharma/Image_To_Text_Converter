@@ -9,7 +9,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/linear_holder"
+        android:layout_above="@+id/copy_linear_layout"
         android:layout_alignParentTop="true"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -29,11 +29,13 @@
             android:textSize="15sp" />
     </ScrollView>
 
+
     <LinearLayout
-        android:id="@+id/linear_holder"
-        android:layout_above="@+id/share_linear_layout"
+        android:id="@+id/capture_linear_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_above="@id/copy_linear_layout">
+
         <Button
             android:id="@+id/button_capture"
             android:layout_width="0dp"
@@ -43,6 +45,13 @@
             android:textColor="@color/white"
             android:layout_marginTop="8dp"
             android:background="#000"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/copy_linear_layout"
+        android:layout_above="@+id/share_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
         <Button
             android:visibility="gone"
             android:id="@+id/button_copy"
@@ -57,7 +66,6 @@
 
     <LinearLayout
         android:id="@+id/share_linear_layout"
-
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
